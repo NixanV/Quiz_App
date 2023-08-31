@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react'
 
 export const Home = () => {
 return(
-  <h1>Hello</h1>
+    <section className={style["first_section"]}>
+        <h2>Hello to my quiz utopia!</h2>
+    </section>
 );
     
 }
