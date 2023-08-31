@@ -3,9 +3,9 @@ import style from "./styles/header.module.css"
 
 export const Header = () => {
     return(
-        <header>
+        <header className={style["header"]}>
             <nav className={style["nav-bar"]}>
-                <h2 >QuizoTopia</h2>
+            <span className={style["heading"]}> QuizoTopia </span>
                 <ul className={style["ul-nav"]}>
                     <li>
                         <Link to="/quiz">Quizes</Link>

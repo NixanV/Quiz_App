@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .nav-bar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: right;
+    margin-right: 50px;
+    height: 93px;
 }
 
 .ul-nav{
@@ -12,6 +16,40 @@
 
 .ul-nav li{
     list-style-type: none;
-    padding: 20px 30px;
+    padding: 10px 30px;
     margin: 0px;
 }
+
+.header{
+    background-color: #333D51;
+}
+
+.ul-nav li a{
+    font-family: 'Bebas Neue', cursive;
+    color: #EEE8AA;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+
+.heading {
+    color:	#EEE8AA;
+    font-family: 'Bebas Neue', cursive;
+    position: absolute;
+    top:55px;
+    left:180px;
+    font-size: 50px;
+
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient( 	#CD853F,  	#CD853F);
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .7s, background-position .5s ease-in-out;
+  }
+  
+  .heading:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+  }
