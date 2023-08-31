@@ -1,0 +1,30 @@
+.paragraph{
+    width: 880px;
+    height: 450px;
+}
+
+.paragraph p{
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 15px;
+}
+
+.welcome_msg{
+    font-size: 26px;
+    text-align: center;
+}
+
+.first_section{
+    width: 900px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: #D3AC2B;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
