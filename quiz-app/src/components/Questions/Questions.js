@@ -50,7 +50,7 @@ export const QuizPage = () => {
                 </div>
                 <div className={styles["third_wrapper"]}>
                     <div>
-                        <button>Art</button>
+                        <button className={styles["art_btn"]}>Art</button>
                     </div>
                     <div>
                         <button>Movies</button>
