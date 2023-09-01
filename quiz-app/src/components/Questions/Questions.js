@@ -30,7 +30,7 @@ export const QuizPage = () => {
                         <button className={styles["general_knowlege_btn"]}>General knowledge</button>
                     </div>
                     <div>
-                        <button className={styles["History_btn"]}>History</button>
+                        <button className={styles["history_btn"]}>History</button>
                     </div>
                 
                     <div>
