@@ -60,15 +60,18 @@ export const QuizPage = () => {
                     </div>
                 </div>
 
-                <div>
-                    <button>Video Games</button>
+                <div className={styles["fourth_wrapper"]}>
+                    <div>
+                        <button>Video Games</button>
+                    </div>
+                    <div>
+                        <button>Sciense and Nature</button>
+                    </div>
+                    <div>
+                        <button>Celebrities</button>
+                    </div>
                 </div>
-                <div>
-                    <button>Sciense and Nature</button>
-                </div>
-                <div>
-                    <button>Celebrities</button>
-                </div>
+                
             </section>
         </main>
     );

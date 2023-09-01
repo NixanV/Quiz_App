@@ -206,6 +206,15 @@
 }
 
 
+.fourth_wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 950px;
+    justify-content: space-between;
+    margin-top: 50px; 
+}
+
+
 
 
 
