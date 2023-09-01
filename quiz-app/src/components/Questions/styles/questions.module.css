@@ -83,7 +83,7 @@
 .geography_btn{
     width: 280px;
     height: 100px;
-    background-color: rgb(121, 0, 0);
+    background-color: #82c5d6;
     font-size: 34px;
     font-family: 'Bebas Neue', cursive;
     border: 1px solid transparent;
@@ -93,7 +93,7 @@
 }
 
 .geography_btn:hover{
-    background-color: rgb(121, 0, 30);
+    background-color: #82cbdd;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     transform: translateY(-3px);
     transition-duration: 500ms;
