@@ -5,7 +5,7 @@ export const Header = () => {
     return(
         <header className={style["header"]}>
             <nav className={style["nav-bar"]}>
-            <span className={style["heading"]}> QuizoTopia </span>
+            <Link to="/" className={style["heading"]}> QuizoTopia </Link>
                 <ul className={style["ul-nav"]}>
                     <li>
                         <Link to="/quiz">Quizes</Link>
