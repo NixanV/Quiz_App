@@ -34,7 +34,7 @@ export const QuizPage = () => {
                     </div>
                 
                     <div>
-                        <button>Sports</button>
+                        <button className={styles["sports_btn"]}>Sports</button>
                     </div>
                 </div>
                 <div>
