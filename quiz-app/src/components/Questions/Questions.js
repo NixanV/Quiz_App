@@ -25,14 +25,17 @@ export const QuizPage = () => {
                 </div>     
             </section>
             <section className={styles["types_quizes"]}>
-                <div>
-                    <button>General knowledge</button>
-                </div>
-                <div>
-                    <button>History</button>
-                </div>
-                <div>
-                    <button>Sports</button>
+                <div className={styles["first_wrapper"]}>
+                    <div>
+                        <button className={styles["general_knowlege_btn"]}>General knowledge</button>
+                    </div>
+                    <div>
+                        <button className={styles["History_btn"]}>History</button>
+                    </div>
+                
+                    <div>
+                        <button>Sports</button>
+                    </div>
                 </div>
                 <div>
                     <button>Geography</button>
@@ -54,6 +57,12 @@ export const QuizPage = () => {
                 </div>
                 <div>
                     <button>Video Games</button>
+                </div>
+                <div>
+                    <button>Sciense and Nature</button>
+                </div>
+                <div>
+                    <button>Celebrities</button>
                 </div>
             </section>
         </main>
