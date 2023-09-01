@@ -255,8 +255,24 @@
     transition-duration: 500ms;
 }
 
+.celebrities_btn{
+    width: 280px;
+    height: 100px;
+    background-color: #c85a39;
+    font-size: 34px;
+    font-family: 'Bebas Neue', cursive;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
 
-
+.celebrities_btn:hover{
+    background-color: #c85a49;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    transform: translateY(-3px);
+    transition-duration: 500ms;
+}
 
 
 

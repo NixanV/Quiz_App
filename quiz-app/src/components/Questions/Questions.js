@@ -68,7 +68,7 @@ export const QuizPage = () => {
                         <button className={styles["science_nature_btn"]}>Science and Nature</button>
                     </div>
                     <div>
-                        <button>Celebrities</button>
+                        <button className={styles["celebrities_btn"]}>Celebrities</button>
                     </div>
                 </div>
                 
