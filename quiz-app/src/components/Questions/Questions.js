@@ -62,7 +62,7 @@ export const QuizPage = () => {
 
                 <div className={styles["fourth_wrapper"]}>
                     <div>
-                        <button>Video Games</button>
+                        <button className={styles["video_games_btn"]}>Video Games</button>
                     </div>
                     <div>
                         <button>Sciense and Nature</button>
