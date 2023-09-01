@@ -56,7 +56,7 @@ export const QuizPage = () => {
                         <button className={styles["movies_btn"]}>Movies</button>
                     </div>
                     <div>
-                        <button>Music</button>
+                        <button className={styles["music_btn"]}>Music</button>
                     </div>
                 </div>
 
