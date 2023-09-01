@@ -48,16 +48,18 @@ export const QuizPage = () => {
                         <button className={styles["vehicles_btn"]}>Vehicles</button>
                     </div>
                 </div>
-                
-                <div>
-                    <button>Art</button>
+                <div className={styles["third_wrapper"]}>
+                    <div>
+                        <button>Art</button>
+                    </div>
+                    <div>
+                        <button>Movies</button>
+                    </div>
+                    <div>
+                        <button>Music</button>
+                    </div>
                 </div>
-                <div>
-                    <button>Movies</button>
-                </div>
-                <div>
-                    <button>Music</button>
-                </div>
+
                 <div>
                     <button>Video Games</button>
                 </div>
