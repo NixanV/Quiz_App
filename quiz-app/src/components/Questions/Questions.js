@@ -37,15 +37,18 @@ export const QuizPage = () => {
                         <button className={styles["sports_btn"]}>Sports</button>
                     </div>
                 </div>
-                <div>
-                    <button>Geography</button>
+                <div className={styles["second_wrapper"]}>
+                    <div>
+                        <button className={styles["geography_btn"]}>Geography</button>
+                    </div>
+                    <div>
+                        <button className={styles["animals_btn"]}>Animals</button>
+                    </div>
+                    <div>
+                        <button className={styles["vehicles_btn"]}>Vehicles</button>
+                    </div>
                 </div>
-                <div>
-                    <button>Animals</button>
-                </div>
-                <div>
-                    <button>Vehicles</button>
-                </div>
+                
                 <div>
                     <button>Art</button>
                 </div>
