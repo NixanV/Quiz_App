@@ -14,7 +14,7 @@
     
 }
 
-.general_knowlege_btn{
+.general_knowledge_btn{
     width: 280px;
     height: 100px;
     background-color: #fa6400;
@@ -26,7 +26,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
 }
 
-.general_knowlege_btn:hover{
+.general_knowledge_btn:hover{
     background-color: #fb8332;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     transform: translateY(-3px);

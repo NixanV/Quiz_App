@@ -7,8 +7,12 @@ export const QuizPage = () => {
     const [data, setData] = useState([]);
     const navigate = useNavigate();
 
-    const NavigateToQuizes = () => {
+    const NavigateToQuizes = (event) => {
         //Todo: navigate to different pages of quizes through buttons
+        console.log(event.currentTarget.className);
+        if(event.currentTarget.className == "questions_general_knowledge_btn__dwE7F"){
+            navigate("/gk");
+        }
     }
 
     useEffect(() => {
@@ -27,10 +31,10 @@ export const QuizPage = () => {
             <section className={styles["types_quizes"]}>
                 <div className={styles["first_wrapper"]}>
                     <div>
-                        <button className={styles["general_knowlege_btn"]}>General knowledge</button>
+                        <button className={styles["general_knowledge_btn"]} onClick={NavigateToQuizes}>General knowledge</button>
                     </div>
                     <div>
-                        <button className={styles["history_btn"]}>History</button>
+                        <button className={styles["history_btn"]} onClick={NavigateToQuizes}>History</button>
                     </div>
                 
                     <div>
