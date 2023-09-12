@@ -19,13 +19,14 @@ export const QuizPage = () => {
         else if(event.currentTarget.className == "questions_sports_btn__6pWhG"){
             navigate("/sports")
         }
+        //TODO: navigate to all other pages
     }
 
-    useEffect(() => {
-        service.getAll()
-            .then(res => setData(res.results)); 
+    // useEffect(() => {
+    //     service.getAll()
+    //         .then(res => setData(res.results)); 
             
-    }, [])
+    // }, [])
 
     return(
         <main className={styles["main_section_categories"]}>
