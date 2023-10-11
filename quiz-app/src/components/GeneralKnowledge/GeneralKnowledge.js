@@ -11,6 +11,7 @@ export const GeneralKnowledge = () =>{
     const max = 3;
     const min = 0;
     let randomInt = 0;
+    const [clicked, setClicked] = useState(false);
     
 
     useEffect(() => {
@@ -66,9 +67,14 @@ export const GeneralKnowledge = () =>{
         setButtonOptions([...shuffleArray()]);
     }, []);
 
+    const clickedAnswer = () => {
+        setClicked(true);
+    }
+    console.log(clicked);
 
     //console.log(buttonOptions);
     return(
+        
         <div>
         <h1>Trivia Questions</h1>
         <ul>
@@ -78,10 +84,14 @@ export const GeneralKnowledge = () =>{
                     <p>Question: {question.question}</p>
                     {/* <p>Correct Answer: {question.correct_answer}</p>
                     <p>Incorrect Answers: {question.incorrect_answers.join(', ')}</p> */}
-                    <button className={style["answer-button"]}>{question.correct_answer}</button>
+                    <button 
+                        className={clicked ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
+                        onClick={() => clickedAnswer()}>
+                        {question.correct_answer}
+                    </button>
                     {
                         question.incorrect_answers.map((answer, index) => (
-                            <button className={style["answer-button"]}>{answer}</button>
+                            <button className={style["wrong-answer-button"]}>{answer}</button>
                         ))
                     }
 
