@@ -12,6 +12,7 @@ export const GeneralKnowledge = () =>{
     const min = 0;
     let randomInt = 0;
     const [clicked, setClicked] = useState(false);
+    const [changedIndex, setChangedIndex] = useState(0);
     
 
     useEffect(() => {
@@ -39,7 +40,6 @@ export const GeneralKnowledge = () =>{
         randomCorrect = Math.floor(Math.random() * (max - min + 1)) + min;
 
 
-
         while( currentIndex !== 0){
             if(randomCorrect == currentIndex){
                 array.push(data.map((questions, index) => (
@@ -52,38 +52,33 @@ export const GeneralKnowledge = () =>{
                 )))
                 step += 1;
             }
-            //console.log(step);
-            //console.log(currentIndex);
             
             currentIndex--;
         }
-        //console.log(array);
-        // dobavqme i verniq otgovor v maisva i posle samo proverqvame dali e susthoto kato correct_answer
 
+        // dobavqme i verniq otgovor v maisva i posle samo proverqvame dali e susthoto kato correct_answer
         return array;
     }
 
-    useEffect(() => {  
-        setButtonOptions([...shuffleArray()]);
-    }, []);
-
-    const clickedAnswer = () => {
+    const clickedAnswer = (index) => {
         setClicked(!clicked);
+        setChangedIndex(index++);
     }
+    let changed_index = 0
 
-    //console.log(buttonOptions);
     return(
         
         <div>
         <h1>Trivia Questions</h1>
         <ul>
             {data.map((question, index) => (
+                
                 // console.log(randomInt = Math.floor(Math.random() * (max - min + 1)) + min),
                 <li key={index}>
                     <p>Question: {question.question}</p>
 
                     <button 
-                        className={clicked ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
+                        className={clicked && changedIndex === index ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
                         onClick={clickedAnswer}>
                         {question.correct_answer}
                     </button>
@@ -94,6 +89,7 @@ export const GeneralKnowledge = () =>{
                     }
 
                 </li>
+
           ))}
         </ul>
       </div>
