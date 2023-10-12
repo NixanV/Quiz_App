@@ -68,9 +68,8 @@ export const GeneralKnowledge = () =>{
     }, []);
 
     const clickedAnswer = () => {
-        setClicked(true);
+        setClicked(!clicked);
     }
-    console.log(clicked);
 
     //console.log(buttonOptions);
     return(
@@ -82,11 +81,10 @@ export const GeneralKnowledge = () =>{
                 // console.log(randomInt = Math.floor(Math.random() * (max - min + 1)) + min),
                 <li key={index}>
                     <p>Question: {question.question}</p>
-                    {/* <p>Correct Answer: {question.correct_answer}</p>
-                    <p>Incorrect Answers: {question.incorrect_answers.join(', ')}</p> */}
+
                     <button 
                         className={clicked ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
-                        onClick={() => clickedAnswer()}>
+                        onClick={clickedAnswer}>
                         {question.correct_answer}
                     </button>
                     {
