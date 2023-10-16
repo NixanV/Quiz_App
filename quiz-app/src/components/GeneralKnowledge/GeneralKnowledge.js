@@ -28,9 +28,9 @@ export const GeneralKnowledge = () =>{
         ))
     }
     
-    console.log(data);
+    //console.log(data);
     const shuffleArray = () => {
-        let array = [];
+        let allanswersArray = [];
         let randomInt, temporaryValue;
         let currentIndex = 4;
         let randomCorrect;
@@ -42,23 +42,26 @@ export const GeneralKnowledge = () =>{
 
         while( currentIndex !== 0){
             if(randomCorrect == currentIndex){
-                array.push(data.map((questions, index) => (
-                    [questions.correct_answer]
+                allanswersArray.push(data.map((questions, index) => (
+                    questions.correct_answer
                 )))
             }
             else{
-                array.push(data.map((questions, index) => (
-                    [questions.incorrect_answers[step]]
+                allanswersArray.push(data.map((questions, index) => (
+                    questions.incorrect_answers[step]
                 )))
                 step += 1;
             }
             
             currentIndex--;
+            console.log(allanswersArray);
         }
 
         // dobavqme i verniq otgovor v maisva i posle samo proverqvame dali e susthoto kato correct_answer
-        return array;
+        return allanswersArray;
     }
+    //console.log(shuffleArray());
+    shuffleArray();
 
     const clickedAnswer = (index) => {
         setClicked(!clicked);
