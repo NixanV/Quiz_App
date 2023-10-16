@@ -20,8 +20,7 @@ export const GeneralKnowledge = () =>{
                 
     }, [])
     
-    
-    //console.log(data);
+
     const shuffleArray = () => {
         let allanswersArray = [];
         let currentIndex = 4;
@@ -60,6 +59,7 @@ export const GeneralKnowledge = () =>{
             setButtonClass("correct-answer-button")
         }
     }
+    console.log(buttonClass);
 
     // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
 
@@ -71,8 +71,7 @@ export const GeneralKnowledge = () =>{
         <h1>Trivia Questions</h1>
         <ul>
             {data.map((question, index) => (
-                
-                // console.log(randomInt = Math.floor(Math.random() * (max - min + 1)) + min),
+
                 <li key={index}>
                     <p>Question: {question.question}</p>
                     {

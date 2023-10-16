@@ -1,0 +1,125 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "How many books are in the Chronicles of Narnia series?",
+            "correct_answer": "7",
+            "incorrect_answers": [
+                "6",
+                "8",
+                "5"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Who wrote the 1967 horror novel &quot;Rosemary&#039;s Baby&quot;?",
+            "correct_answer": "Ira Levin",
+            "incorrect_answers": [
+                "Stephen King",
+                "Robert Bloch",
+                "Mary Shelley"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
+            "correct_answer": "The Artful Dodger",
+            "incorrect_answers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In the novel &quot;Lord of the Rings&quot;, how many rings of power were given to the race of man?",
+            "correct_answer": "9",
+            "incorrect_answers": [
+                "5",
+                "11",
+                "13"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the last message of the Dolphins in &quot;The Hitchhiker&#039;s Guide to the Galaxy&quot;?",
+            "correct_answer": "&quot;So long, and thanks for all the fish.&quot;",
+            "incorrect_answers": [
+                "&quot;The answer is 42.&quot;",
+                "&quot;Land of the brave.&quot;",
+                "&quot;Goodbye cruel world!&quot;"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What is the make and model of the tour vehicles in &quot;Jurassic Park&quot; (1990)?",
+            "correct_answer": "1989 Toyota Land Cruiser",
+            "incorrect_answers": [
+                "1989 Jeep Wrangler YJ Sahar",
+                "1989 Ford Explorer XLT",
+                "Mercedes M-Class"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In &quot;Little Women&quot;, which of the March sisters married Laurie?",
+            "correct_answer": "Amy",
+            "incorrect_answers": [
+                "Beth",
+                "Jo",
+                "Meg"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In Alice in Wonderland, what is the name of Alice&#039;s kitten?",
+            "correct_answer": "Dinah",
+            "incorrect_answers": [
+                "Oscar",
+                "Heath",
+                "Smokey"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Who is the author of the series &quot;Malazan Book of the Fallen&quot;?",
+            "correct_answer": "Steven Erikson",
+            "incorrect_answers": [
+                "Ian Cameron Esslemont",
+                "George R. R. Martin",
+                "J. R. R. Tolkien"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In The Lies of Locke Lamora, what title is Locke known by in the criminal world?",
+            "correct_answer": "The Thorn of Camorr",
+            "incorrect_answers": [
+                "The Rose of the Marrows",
+                "The Thorn of Emberlain",
+                "The Thorn of the Marrows"
+            ]
+        }
+    ]
+}
