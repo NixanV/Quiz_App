@@ -10,9 +10,7 @@ export const GeneralKnowledge = () =>{
     const [buttonOptions, setButtonOptions] = useState([])
     const max = 3;
     const min = 0;
-    let randomInt = 0;
     const [clicked, setClicked] = useState(false);
-    const [changedIndex, setChangedIndex] = useState(0);
     
 
     useEffect(() => {
@@ -21,17 +19,10 @@ export const GeneralKnowledge = () =>{
                 
     }, [])
     
-
-    const addingElementInArray = () => {
-        data.map((question, index) => (
-            question.incorrect_answers.push(question.correct_answer)
-        ))
-    }
     
     //console.log(data);
     const shuffleArray = () => {
         let allanswersArray = [];
-        let randomInt, temporaryValue;
         let currentIndex = 4;
         let randomCorrect;
         let step = 0;
@@ -63,10 +54,18 @@ export const GeneralKnowledge = () =>{
     //console.log(shuffleArray());
     shuffleArray();
 
-    const clickedAnswer = (index) => {
-        setClicked(!clicked);
-        setChangedIndex(index++);
+    const clickedButtonHandler = (currAnswer, correctAnswer) => {
+        setClicked(!clicked)
+        if(currAnswer == correctAnswer){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
+
+    // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
+
    
 
     return(
@@ -82,7 +81,9 @@ export const GeneralKnowledge = () =>{
                     {
                         shuffleArray().map((answer, i) => (
                             <button
-                                className={clicked && answer === question.correct_answer ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
+                                onClick={clickedButtonHandler(answer, question.correct_answer)}
+                                className={clicked && clickedButtonHandler(answer, question.correct_answer) ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
+                                
                             >
                                 {answer}
                                 
