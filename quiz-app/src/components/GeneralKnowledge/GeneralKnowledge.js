@@ -11,6 +11,7 @@ export const GeneralKnowledge = () =>{
     const max = 3;
     const min = 0;
     const [clicked, setClicked] = useState(false);
+    const [buttonClass, setButtonClass] = useState("correct-answer-button-not-clicked")
     
 
     useEffect(() => {
@@ -55,12 +56,8 @@ export const GeneralKnowledge = () =>{
     shuffleArray();
 
     const clickedButtonHandler = (currAnswer, correctAnswer) => {
-        setClicked(!clicked)
         if(currAnswer == correctAnswer){
-            return true;
-        }
-        else{
-            return false;
+            setButtonClass("correct-answer-button")
         }
     }
 
@@ -81,8 +78,8 @@ export const GeneralKnowledge = () =>{
                     {
                         shuffleArray().map((answer, i) => (
                             <button
+                                className={style[buttonClass]}
                                 onClick={clickedButtonHandler(answer, question.correct_answer)}
-                                className={clicked && clickedButtonHandler(answer, question.correct_answer) ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
                                 
                             >
                                 {answer}
