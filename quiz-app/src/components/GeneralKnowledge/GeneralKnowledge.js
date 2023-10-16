@@ -67,7 +67,7 @@ export const GeneralKnowledge = () =>{
         setClicked(!clicked);
         setChangedIndex(index++);
     }
-    let changed_index = 0
+   
 
     return(
         
@@ -79,8 +79,18 @@ export const GeneralKnowledge = () =>{
                 // console.log(randomInt = Math.floor(Math.random() * (max - min + 1)) + min),
                 <li key={index}>
                     <p>Question: {question.question}</p>
+                    {
+                        shuffleArray().map((answer, i) => (
+                            <button
+                                className={clicked && answer === question.correct_answer ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
+                            >
+                                {answer}
+                                
+                            </button>
+                        ))
+                    }
 
-                    <button 
+                    {/* <button 
                         className={clicked && changedIndex === index ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
                         onClick={clickedAnswer}>
                         {question.correct_answer}
@@ -89,7 +99,7 @@ export const GeneralKnowledge = () =>{
                         question.incorrect_answers.map((answer, index) => (
                             <button className={style["wrong-answer-button"]}>{answer}</button>
                         ))
-                    }
+                    } */}
 
                 </li>
 
