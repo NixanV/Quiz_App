@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 
 
-export const GeneralKnowledge = () =>{
+export const GeneralKnowledge = ({questions}) =>{
     const [data, setData] = useState([]);
     const [number, setNumber] = useState(0);
     const [buttonOptions, setButtonOptions] = useState([])

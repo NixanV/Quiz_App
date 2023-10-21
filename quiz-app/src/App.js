@@ -5,6 +5,7 @@ import { Header } from "./components/common/Header/Header.js"
 import {Footer} from "./components/common/Footer/Footer.js"
 import { GeneralKnowledge } from "./components/GeneralKnowledge/GeneralKnowledge.js";
 import {History} from "./components/History/History.js"
+import GeneralKnowledgeQuestions from "./data/generalKnowledge.json"
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/quiz" element={<QuizPage />}/>
-                        <Route path="/gk" element={<GeneralKnowledge />}/>
+                        <Route path="/gk" element={<GeneralKnowledge questions = {GeneralKnowledgeQuestions}/>}/>
                         <Route path="/history" element={<History />} />
                     </Routes>
                 </main>
