@@ -2,18 +2,30 @@ import style from "./styles/gk.module.css"
 import * as service from "../../services/quizService"
 import { useEffect, useState } from "react"
 
+const reorderAnswers = (question) => {
+    const answers = [question.correct_answet, ...question.incorrect_answers];
 
+    for(let i = 0; i < answers.length; i++){
+        const j = Math.floor(Math.random() * i);
+        let temp = answers[i];
+        answers[i] = answers[j];
+        answers[j] = temp;
+    }
+    
+    return answers;
+}
 
 export const GeneralKnowledge = ({questions}) =>{
+    const [currentQuestion, setCurrentQuestion] = useState(questions)
     const [data, setData] = useState([]);
     const [number, setNumber] = useState(0);
     const [buttonOptions, setButtonOptions] = useState([])
     const max = 3;
     const min = 0;
     const [clicked, setClicked] = useState(false);
-    const [buttonClass, setButtonClass] = useState("correct-answer-button-not-clicked")
     
-
+    
+    console.log(questions)
     useEffect(() => {
             service.getAllGK()
                 .then((res) => setData(res.results)); 
@@ -78,8 +90,7 @@ export const GeneralKnowledge = ({questions}) =>{
                         shuffleArray().map((answer, i) => (
                             <button
                                 className={style[buttonClass]}
-                                onClick={clickedButtonHandler(answer, question.correct_answer)}
-                                
+                                onClick={clickedButtonHandler(answer, question.correct_answer)}                               
                             >
                                 {answer}
                                 

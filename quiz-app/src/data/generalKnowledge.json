@@ -1,6 +1,4 @@
-{
-    "response_code": 0,
-    "results": [
+[
         {
             "category": "Entertainment: Books",
             "type": "multiple",
@@ -121,5 +119,4 @@
                 "The Thorn of the Marrows"
             ]
         }
-    ]
-}
+]
