@@ -11,11 +11,11 @@ const reorderAnswers = (question) => {
         answers[i] = answers[j];
         answers[j] = temp;
     }
-    
+
     return answers;
 }
 
-export const GeneralKnowledge = ({questions}) =>{
+export const GeneralKnowledge = ({questions}) => {
     const [currentQuestion, setCurrentQuestion] = useState(questions)
     const [data, setData] = useState([]);
     const [number, setNumber] = useState(0);
@@ -25,7 +25,7 @@ export const GeneralKnowledge = ({questions}) =>{
     const [clicked, setClicked] = useState(false);
     
     
-    console.log(questions)
+    console.log(questions[0][1])
     useEffect(() => {
             service.getAllGK()
                 .then((res) => setData(res.results)); 
@@ -57,7 +57,7 @@ export const GeneralKnowledge = ({questions}) =>{
             }
             
             currentIndex--;
-            console.log(allanswersArray);
+            //console.log(allanswersArray);
         }
 
         // dobavqme i verniq otgovor v maisva i posle samo proverqvame dali e susthoto kato correct_answer
@@ -66,31 +66,25 @@ export const GeneralKnowledge = ({questions}) =>{
     //console.log(shuffleArray());
     shuffleArray();
 
-    const clickedButtonHandler = (currAnswer, correctAnswer) => {
-        if(currAnswer == correctAnswer){
-            setButtonClass("correct-answer-button")
-        }
-    }
-    console.log(buttonClass);
 
     // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
 
    
-
+    console.log(questions[0][0].category);
     return(
         
         <div>
         <h1>Trivia Questions</h1>
         <ul>
-            {data.map((question, index) => (
+            {questions.map((question, index) => (
 
                 <li key={index}>
                     <p>Question: {question.question}</p>
+                    {console.log(question.question)}
                     {
                         shuffleArray().map((answer, i) => (
                             <button
-                                className={style[buttonClass]}
-                                onClick={clickedButtonHandler(answer, question.correct_answer)}                               
+                                                  
                             >
                                 {answer}
                                 
