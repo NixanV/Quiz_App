@@ -16,7 +16,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/quiz" element={<QuizPage />}/>
-                        <Route path="/gk" element={<GeneralKnowledge questions = {[GeneralKnowledgeQuestions]}/>}/>
+                        <Route path="/gk" element={<GeneralKnowledge questions = {GeneralKnowledgeQuestions}/>}/>
                         <Route path="/history" element={<History />} />
                     </Routes>
                 </main>

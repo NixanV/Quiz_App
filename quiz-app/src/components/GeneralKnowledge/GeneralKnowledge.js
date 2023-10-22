@@ -15,7 +15,7 @@ const reorderAnswers = (question) => {
     return answers;
 }
 
-export const GeneralKnowledge = ({questions}) => {
+export const GeneralKnowledge = ({ questions }) => {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
     const [answers, setAnswers] = useState([]);
@@ -26,7 +26,7 @@ export const GeneralKnowledge = ({questions}) => {
     
 
     useEffect(() => {
-        const question = currentQuestion[questionIndex];
+        const question = questions[questionIndex];
         setCurrentQuestion(question);
         setAnswers(reorderAnswers(question));
     }, [questionIndex]);
@@ -78,7 +78,7 @@ export const GeneralKnowledge = ({questions}) => {
     // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
 
    
-    console.log(questions[0][3].correct_answer);
+    console.log(questions[questionIndex].correct_answer);
     return(
         
         <div>
