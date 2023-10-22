@@ -31,9 +31,7 @@ export const GeneralKnowledge = ({ questions }) => {
         setAnswers(reorderAnswers(question));
     }, [questionIndex]);
 
-    console.log(currentQuestion);
 
-    console.log(answers);
     useEffect(() => {
             service.getAllGK()
                 .then((res) => setData(res.results)); 
@@ -41,38 +39,6 @@ export const GeneralKnowledge = ({ questions }) => {
     }, [])
     
 
-    const shuffleArray = () => {
-        let allanswersArray = [];
-        let currentIndex = 4;
-        let randomCorrect;
-        let step = 0;
-
-
-        randomCorrect = Math.floor(Math.random() * (max - min + 1)) + min;
-
-
-        while( currentIndex !== 0){
-            if(randomCorrect == currentIndex){
-                allanswersArray.push(data.map((questions, index) => (
-                    questions.correct_answer
-                )))
-            }
-            else{
-                allanswersArray.push(data.map((questions, index) => (
-                    questions.incorrect_answers[step]
-                )))
-                step += 1;
-            }
-            
-            currentIndex--;
-            //console.log(allanswersArray);
-        }
-
-        // dobavqme i verniq otgovor v maisva i posle samo proverqvame dali e susthoto kato correct_answer
-        return allanswersArray;
-    }
-    //console.log(shuffleArray());
-    shuffleArray();
 
 
     // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
@@ -88,17 +54,14 @@ export const GeneralKnowledge = ({ questions }) => {
 
                 <li key={index}>
                     <p>Question: {question.question}</p>
-                    {console.log(question.question)}
                     {
-                        shuffleArray().map((answer, i) => (
-                            <button
-                                                  
-                            >
-                                {answer}
-                                
+                        answers.map((a, i) => {
+                            <button className={style["correct-answer-button"]}>
+                                {a}
                             </button>
-                        ))
+                        })
                     }
+                    
 
                     {/* <button 
                         className={clicked && changedIndex === index ? style["correct-answer-button"] : style["correct-answer-button-not-clicked"]}
