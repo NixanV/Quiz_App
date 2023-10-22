@@ -3,7 +3,7 @@ import * as service from "../../services/quizService"
 import { useEffect, useState } from "react"
 
 const reorderAnswers = (question) => {
-    const answers = [question.correct_answet, ...question.incorrect_answers];
+    const answers = [question.correct_answer, ...question.incorrect_answers];
 
     for(let i = 0; i < answers.length; i++){
         const j = Math.floor(Math.random() * i);
@@ -16,16 +16,24 @@ const reorderAnswers = (question) => {
 }
 
 export const GeneralKnowledge = ({questions}) => {
-    const [currentQuestion, setCurrentQuestion] = useState(questions)
+    const [questionIndex, setQuestionIndex] = useState(0);
+    const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
+    const [answers, setAnswers] = useState([]);
     const [data, setData] = useState([]);
-    const [number, setNumber] = useState(0);
-    const [buttonOptions, setButtonOptions] = useState([])
     const max = 3;
     const min = 0;
-    const [clicked, setClicked] = useState(false);
     
     
-    console.log(questions[0][1])
+
+    useEffect(() => {
+        const question = currentQuestion[questionIndex];
+        setCurrentQuestion(question);
+        setAnswers(reorderAnswers(question));
+    }, [questionIndex]);
+
+    console.log(currentQuestion);
+
+    console.log(answers);
     useEffect(() => {
             service.getAllGK()
                 .then((res) => setData(res.results)); 
@@ -70,7 +78,7 @@ export const GeneralKnowledge = ({questions}) => {
     // v button handler func sravnqvame dali tova e verniq otgovor ili ne e
 
    
-    console.log(questions[0][0].category);
+    console.log(questions[0][3].correct_answer);
     return(
         
         <div>
